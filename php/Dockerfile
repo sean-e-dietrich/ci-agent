@@ -53,4 +53,6 @@ RUN \
 	composer clear-cache
 
 # Cannot use variables with COPY --chown. See https://github.com/moby/moby/issues/35018
-COPY --chown=agent:agent config/.drush $AGENT_HOME/.drush
+#COPY --chown=agent:agent config/.drush $AGENT_HOME/.drush
+COPY config/.drush $AGENT_HOME/.drush
+RUN chown $AGENT_USER $AGENT_HOME/.drush
