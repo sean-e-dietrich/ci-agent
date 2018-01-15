@@ -1,4 +1,4 @@
-FROM docksal/ci-agent:base
+FROM seandietrich/ci-agent:base
 
 # Switch to root to install some system-wide stuff
 USER root
